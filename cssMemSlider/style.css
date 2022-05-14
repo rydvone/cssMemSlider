@@ -19,9 +19,24 @@
   --color-yellow-grey: #b8b7b0;
   --time-slow: 0.7s;
   --time-fast: 0.4s;
-  --fz-header: 4rem;
-  --lh-header: 1.3em;
-  --ls-header: 0.06em;
+  --fz-h1: 4rem;
+  --lh-h1: 1.3em;
+  --ls-h1: 0.06em;
+  --fz-footer: 2rem;
+  --lh-footer: 1.3em;
+  --ls-footer: 0.06em;
+  --fz-h1-768: 2rem;
+  --lh-h1-768: 1.3em;
+  --ls-h1-768: 0.06em;
+  --fz-footer-768: 1.5rem;
+  --lh-footer-768: 1.3em;
+  --ls-footer-768: 0.06em;
+  --fz-h1-425: 1.5rem;
+  --lh-h1-425: 1.3em;
+  --ls-h1-425: 0.06em;
+  --fz-footer-425: 1rem;
+  --lh-footer-425: 1.3em;
+  --ls-footer-425: 0.06em;
 }
 
 a {
@@ -39,11 +54,11 @@ a {
   color: var(--color-white);
 }
 
-.wrapper {
+/* .wrapper {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
-}
+} */
 
 .body-container {
   display: flex;
@@ -69,25 +84,27 @@ a {
   color: var(--color-yellow-white);
   font-family: 'Merriweather', serif;
   font-style: bold;
-  font-size: var(--fz-header);
-  line-height: var(--lh-header);
-  letter-spacing: var(--ls-header);
+  font-size: var(--fz-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
 }
 
 .footer-container {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: center; */
-  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  /* display: grid;
   grid-template-columns: 3% 7% 10%;
-  align-items: center; 
+  align-items: center;  */
   width: auto;
   height: 3em;
   font-style: normal;
   font-weight: bold;
-  font-size: 2rem;
-  line-height: 40px;
+  font-size: var(--fz-footer);
+  line-height: var(--lh-footer);
+  letter-spacing: var(--ls-footer);
   color: var(--color-yellow-white);
   /* background-color: var(--color-black); */
 }
@@ -95,4 +112,47 @@ a {
 .footer__item {
   /* display: inline; */
   /* margin; */
+}
+
+
+@media (max-width: 768px) {
+ 
+ 
+  .h1 {
+    font-style: bold;
+    font-size: var(--fz-h1-768);
+    line-height: var(--lh-h1-768);
+    letter-spacing: var(--ls-h1-768);
+  }
+
+  .footer-container {
+    gap: 0.7em;
+    width: auto;
+    height: 3em;
+    font-weight: bold;
+    font-size: var(--fz-footer-768);
+    line-height: var(--lh-footer-768);
+    letter-spacing: var(--ls-footer-768);
+  }
+}
+
+@media (max-width: 425px) {
+ 
+ 
+  .h1 {
+    font-style: bold;
+    font-size: var(--fz-h1-425);
+    line-height: var(--lh-h1-425);
+    letter-spacing: var(--ls-h1-425);
+  }
+
+  .footer-container {
+    gap: 0.5em;
+    width: auto;
+    height: 3em;
+    font-weight: bold;
+    font-size: var(--fz-footer-425);
+    line-height: var(--lh-footer-425);
+    letter-spacing: var(--ls-footer-425);
+  }
 }
