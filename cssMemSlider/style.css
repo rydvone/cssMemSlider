@@ -109,18 +109,30 @@ a {
   width: auto;
 }
 
-/* --------------------slider-------------------- */
+/* ------------------------------slider------------------------------ */
 .slider {
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
   gap: 1.2rem;
-  justify-content: flex-start;
+  /* justify-content: center; */
   align-items: center;
-  user-select: none;
+
+  width: 50em;
+
+  /* height: 28.125rem; */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: ; */
+
+  margin: 0 auto;
+  /* user-select: none; */
 }
 
 .item__radio-button {
   display: inline;
+  height: 0;
+  overflow: hidden;
 }
 
 .items__image {
@@ -130,21 +142,15 @@ a {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-
-  transform: translateX(00%);
-  transition: var(--time-fast) all linear;
-/* 
-  transform: translateX(0);
-  transform: translateX(120%);     */
+  transform: translateX(40%);
 }
-  
-  /* width: 50rem; */
-  /* overflow-x: hidden; */
 
 .item__image {
   display: inline-block;
   width: 50rem;
   height: 28.125rem;
+  opacity: 0;
+  transition: var(--time-slow);
 }
 #image-1 {
   background-image: url('./assets/image/800-450/meme-01.gif');
@@ -161,6 +167,80 @@ a {
 #image-5 {
   background-image: url('./assets/image/800-450/meme-05.gif');
 }
+
+.items__control {
+  display: flex;
+  justify-content: space-between;
+  width: 50rem;
+}
+
+.items__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  width: 30rem;
+  /* transform: translate(150%); */
+  /* width: 50%; */
+  /* visibility: collapse; */
+}
+.item__text {
+  display: block;
+  /* transform: translateX(0%); */
+  font-size: var(--fz-text);
+  line-height: var(--lh-text);
+  color: var(--color-yellow-light);
+  width: 20rem;
+  white-space: nowrap;
+  visibility: collapse;
+  /* overflow: hidden; */
+  /* width: 0;   */
+}
+
+#radio-1:checked ~ .items__control > .items__text #text-1 {
+  transform: translateX(-0%);
+  transition: var(--time-fast) all linear;
+}
+#radio-2:checked ~ .items__control > .items__text #text-2 {
+  transform: translateX(-100%);
+  transition: var(--time-fast) all linear;
+}
+#radio-3:checked ~ .items__control > .items__text #text-3 {
+  transform: translateX(-200%);
+  transition: var(--time-fast) all linear;
+}
+#radio-4:checked ~ .items__control > .items__text #text-4 {
+  transform: translateX(-60rem);
+  transition: var(--time-fast) all linear;
+}
+#radio-5:checked ~ .items__control > .items__text #text-5 {
+  transform: translateX(-73rem);
+  /* visibility: visible; */
+  transition: var(--time-fast) all linear;
+}
+
+#radio-1:checked ~ .items__control > .items__text #text-1, 
+#radio-2:checked ~ .items__control > .items__text #text-2,
+#radio-3:checked ~ .items__control > .items__text #text-3,
+#radio-4:checked ~ .items__control > .items__text #text-4,
+#radio-5:checked ~ .items__control > .items__text #text-5 {
+  visibility: visible;
+  transition: var(--time-slow);
+  /* width: 30rem; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #radio-1:checked ~ .items__image {
   transform: translateX(40%);
@@ -182,19 +262,21 @@ a {
   transform: translateX(-40%);
   transition: var(--time-fast) all linear;
 }
-
-
-/* #radio-4:checked ~ .items__image #image-4 {
-  transform: translateX(100%);
-  transition: var(--time-fast) all linear;
-} */
-
-.item__text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--color-yellow-light);
+#radio-1:checked ~ .items__image #image-1, 
+#radio-2:checked ~ .items__image #image-2,
+#radio-3:checked ~ .items__image #image-3,
+#radio-4:checked ~ .items__image #image-4,
+#radio-5:checked ~ .items__image #image-5 {
+  opacity: 1;
+  transition: var(--time-slow);
 }
+
+
+
+
+
+
+
 
 
 
@@ -239,11 +321,11 @@ a {
 
 /*  nth-of-type - это псевдокласс - он не запрещен,
     в отличии от псевдоэлементов */
-#radio-1:checked ~ .items__label label:nth-of-type(1) > .label__style,
-#radio-2:checked ~ .items__label label:nth-of-type(2) > .label__style,
-#radio-3:checked ~ .items__label label:nth-of-type(3) > .label__style,
-#radio-4:checked ~ .items__label label:nth-of-type(4) > .label__style,
-#radio-5:checked ~ .items__label label:nth-of-type(5) > .label__style  {
+#radio-1:checked ~ .items__control > .items__label label:nth-of-type(1) > .label__style,
+#radio-2:checked ~ .items__control > .items__label label:nth-of-type(2) > .label__style,
+#radio-3:checked ~ .items__control > .items__label label:nth-of-type(3) > .label__style,
+#radio-4:checked ~ .items__control > .items__label label:nth-of-type(4) > .label__style,
+#radio-5:checked ~ .items__control > .items__label label:nth-of-type(5) > .label__style  {
   background: var(--color-grey-dark);
   transition: var(--time-slow);
 }
