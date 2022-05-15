@@ -12,13 +12,20 @@
   --color-blue-dark: #122763;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-dark-3xl: #292929;
+  /* --color-dark-3xl: #292929; */
+  --color-dark-3xl: #414141;
   --color-yellow: #eeea00;
   --color-yellow-white: #fffdbb;
   --color-yellow-light: #fffee0;
   --color-yellow-grey: #b8b7b0;
   --time-slow: 0.7s;
   --time-fast: 0.4s;
+  --fz-text: 1rem;
+  --lh-text: 1.3em;
+  --ls-text: 0.06em;
+  --fz-text-450: 0.6rem;
+  --lh-text-450: 1.12em;
+  --ls-text-450: 0.04em;
   --fz-h1: 4rem;
   --lh-h1: 1.3em;
   --ls-h1: 0.06em;
@@ -89,6 +96,32 @@ a {
   letter-spacing: var(--ls-h1);
 }
 
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+
+
+/* --------------------slider-------------------- */
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* --------------------footer-------------------- */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -115,6 +148,7 @@ a {
 }
 
 
+
 @media (max-width: 768px) {
  
  
@@ -138,6 +172,9 @@ a {
 
 @media (max-width: 425px) {
  
+  .wrapper {
+    width: 100%;
+  }
  
   .h1 {
     font-style: bold;

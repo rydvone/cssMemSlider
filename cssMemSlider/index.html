@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,58 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="./assets/icons/meme.ico" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
   <title>meme</title>
 </head>
+
 <body class="body">
   <div class="body-container">
-    <div class="header header">
-      <div class="wrapper">
-        <div class="header-container">
-          <h1 class="h1">css meme slider</h1>
+    <header class="header">
+      <div class="header header">
+        <div class="wrapper">
+          <div class="header-container">
+            <h1 class="h1">css meme slider</h1>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <main class="main-container"></main>
+
+    <main class="main-container">
+      <div class="wrapper"></div>
+
+      <div class="slider">
+        <div class="items__image">
+          <div class="image__item">
+            <img src="./assets/image/350-190/meme-04.gif" alt="meme" class="image meme">
+          </div>
+
+        </div>
+
+        <div class="items__radio">
+          <input type="radio" name="slider" class="item__radio" id="radio-1" checked>
+          <input type="radio" name="slider" class="item__radio" id="radio-2">
+          <input type="radio" name="slider" class="item__radio" id="radio-3">
+          <input type="radio" name="slider" class="item__radio" id="radio-4">
+          <input type="radio" name="slider" class="item__radio" id="radio-5">
+        </div>
+
+
+        
+        <div class="items__description">
+          <span class="item__text text-1">Когда узнали, что количество попыток для прохождения теста JS Basics увеличено до 4-х</span>
+          <span class="item__text text-2">Когда я показываю ментору, что окончательно пофиксил баг</span>
+          <span class="item__text text-3">Когда готовишься сабмитить ссылку на деплой</span>
+          <span class="item__text text-4">Когда запустил npm run test</span>
+          <span class="item__text text-5">Когда на кросс-чеке не заметили баг</span>
+        </div>
+      </div>
+
+    </main>
 
     <footer class="footer">
       <div class="wrapper">
@@ -30,11 +67,12 @@
           <div class="footer__item">©</div>
           <div class="footer__item">2022</div>
           <div class="footer__item">
-              <a class="link" href="https://github.com/rydvone">github</a>
+            <a class="link" href="https://github.com/rydvone">github</a>
           </div>
         </div>
       </div>
     </footer>
   </div>
 </body>
+
 </html>
