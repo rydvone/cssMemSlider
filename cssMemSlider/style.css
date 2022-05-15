@@ -170,11 +170,28 @@ a {
 .item__label:hover > .label__style {
   background: var(--color-yellow-light);
   border: 0.3rem solid var(--color-yellow-light);
+  transition: var(--time-fast);
 }
 
-.item__label:checked > .label__style {
+
+/*  nth-of-type - это псевдокласс - он не запрещен,
+    в отличии от псевдоэлементов */
+#radio-1:checked ~ .items__label label:nth-of-type(1) > .label__style,
+#radio-2:checked ~ .items__label label:nth-of-type(2) > .label__style,
+#radio-3:checked ~ .items__label label:nth-of-type(3) > .label__style,
+#radio-4:checked ~ .items__label label:nth-of-type(4) > .label__style,
+#radio-5:checked ~ .items__label label:nth-of-type(5) > .label__style  {
   background: var(--color-grey-dark);
+  transition: var(--time-slow);
 }
+
+/* .slider > input:nth-of-type(1):checked ~ .items__label label:nth-of-type(1):after, */
+
+/* .csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1):after, */
+
+/* #radio-2:checked ~ label:nth-of-type(2) {
+  background: var(--color-grey-dark);
+} */
 
 /* #radio-1:checked ~ label {
   color: red;
