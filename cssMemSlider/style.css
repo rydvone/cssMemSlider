@@ -120,7 +120,81 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: var(--color-yellow-light);
 }
+
+
+
+.items__radio-button {
+  overflow: hidden;
+  height: 0;
+}
+
+.items__label {
+	display: flex;
+  gap: .2rem;
+	user-select: none;
+}
+.items__label {
+	display: inline-block;
+  display: flex;
+  gap: 0.3rem;
+	user-select: none;
+
+	/* padding-left: 25px;
+	margin-right: 0;
+	line-height: 18px; */
+}
+
+/* .wrapper__item-label {
+} */
+
+.item__label {
+  /* box-sizing: border-box; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* background: var(--color-error); */
+  padding: 0.4rem;
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+.label__style {
+  box-sizing: border-box;
+  display: inline-block;
+  background: var(--color-yellow);
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 0.3rem solid var(--color-yellow);
+}
+.item__label:hover > .label__style {
+  background: var(--color-yellow-light);
+  border: 0.3rem solid var(--color-yellow-light);
+}
+
+.item__label:checked > .label__style {
+  background: var(--color-grey-dark);
+}
+
+/* #radio-1:checked ~ label {
+  color: red;
+  } */
+
+/* .items__label:checked {
+  color: red;
+} */
+/* Checked */
+/* .form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+  */
+/* Hover */
+/* .form_radio_btn label:hover {
+	color: #666;
+} */
+ 
+
+
 /* --------------------footer-------------------- */
 .footer-container {
   display: flex;
@@ -159,6 +233,14 @@ a {
     letter-spacing: var(--ls-h1-768);
   }
 
+  .item__label {
+    padding: 0.4rem;
+  }
+  .label__style {
+    padding: 0.5rem;
+    border: 0.2rem solid var(--color-yellow);
+  }
+
   .footer-container {
     gap: 0.7em;
     width: auto;
@@ -181,6 +263,14 @@ a {
     font-size: var(--fz-h1-425);
     line-height: var(--lh-h1-425);
     letter-spacing: var(--ls-h1-425);
+  }
+
+  .item__label {
+    padding: 0.25rem;
+  }
+  .label__style {
+    padding: 0.4rem;
+    border: 0.2rem solid var(--color-yellow);
   }
 
   .footer-container {
