@@ -13,12 +13,12 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-dark-3xl: #292929;
-  /* --color-dark-3xl: #414141; */
   --color-yellow: #eeea00;
   --color-yellow-white: #fffdbb;
   --color-yellow-light: #fffee0;
   --color-yellow-grey: #b8b7b0;
   --slider-gap: 1.2rem;
+  --slider-gap-768: 1.2rem;
   --time-slow: 0.7s;
   --time-fast: 0.4s;
   --time-slow-very: 1s;
@@ -93,7 +93,6 @@ a {
   letter-spacing: var(--ls-h1);
 }
 
-
 .header-container {
   display: flex;
   flex-direction: column;
@@ -114,6 +113,7 @@ a {
   display: inline;
   height: 0;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .wrapper__content {
@@ -170,42 +170,41 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   overflow-x: hidden;
-  width: 30rem;
-  /* transform: translate(150%); */
-  /* width: 50%; */
-  /* visibility: collapse; */
+  padding: 0;
+  margin: 0;
 }
 .item__text {
-  display: block;
+  display: inline-block;
+  width: 50rem;
   align-self: center;
-  /* transform: translateX(0%); */
+  transform: translateX(201%);
   font-size: var(--fz-text);
   line-height: var(--lh-text);
   color: var(--color-yellow-light);
-  width: 20rem;
   margin: 0;
   white-space: nowrap;
+  /* opacity: 0; */
   visibility: collapse;
 }
 
 #radio-1:checked ~ .wrapper__content > .items__control > .items__text #text-1 {
-  transform: translateX(-0%);
+  transform: translateX(0%);
   transition: var(--time-fast) all linear;
 }
 #radio-2:checked ~ .wrapper__content > .items__control > .items__text #text-2 {
-  transform: translateX(-100%);
+  transform: translateX(-102%);
   transition: var(--time-fast) all linear;
 }
 #radio-3:checked ~ .wrapper__content > .items__control > .items__text #text-3 {
-  transform: translateX(-200%);
+  transform: translateX(-445%);
   transition: var(--time-fast) all linear;
 }
 #radio-4:checked ~ .wrapper__content > .items__control > .items__text #text-4 {
-  transform: translateX(-60rem);
+  transform: translateX(-317%);
   transition: var(--time-fast) all linear;
 }
 #radio-5:checked ~ .wrapper__content > .items__control > .items__text #text-5 {
-  transform: translateX(-73rem);
+  transform: translateX(-540%);
   transition: var(--time-fast) all linear;
 }
 
@@ -215,6 +214,7 @@ a {
 #radio-4:checked ~ .wrapper__content > .items__control > .items__text #text-4,
 #radio-5:checked ~ .wrapper__content > .items__control > .items__text #text-5 {
   visibility: visible;
+  opacity: 1;
   transition: var(--time-slow);
 }
 
@@ -247,7 +247,6 @@ a {
   transition: var(--time-slow);
 }
 
-
 .items__radio-button {
   overflow: hidden;
   height: 0;
@@ -274,6 +273,7 @@ a {
   padding: 0.5rem;
   cursor: pointer;
 }
+
 .label__style {
   box-sizing: border-box;
   display: inline-block;
@@ -288,9 +288,7 @@ a {
   transition: var(--time-fast);
 }
 
-
-/*  nth-of-type - это псевдокласс - он не запрещен,
-    в отличии от псевдоэлементов */
+/*  nth-of-type - это псевдокласс - он не запрещен */
 #radio-1:checked ~ .wrapper__content > .items__control > .items__label label:nth-of-type(1) > .label__style,
 #radio-2:checked ~ .wrapper__content > .items__control > .items__label label:nth-of-type(2) > .label__style,
 #radio-3:checked ~ .wrapper__content > .items__control > .items__label label:nth-of-type(3) > .label__style,
@@ -300,8 +298,6 @@ a {
   transition: var(--time-slow);
 }
 
-
-/* --------------------footer-------------------- */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -318,10 +314,7 @@ a {
   color: var(--color-yellow-white);
 }
 
-
-@media (max-width: 768px) {
- 
- 
+@media (max-width: 767.98px) { 
   .h1 {
     font-style: bold;
     font-size: var(--fz-h1-768);
@@ -338,7 +331,7 @@ a {
   }
   .wrapper__content {
     gap: var(--slider-gap);
-    gap: 0;
+    /* gap: 0; */
     width: 21.875em;
   }
   .item__image {
@@ -370,26 +363,28 @@ a {
   }
 
   .items__text {
-    /* width: 15rem; */
     width: 100%;
     width: 21.875em;
     overflow-y: hidden;
     visibility: visible;
   }
   .item__text {
-    /* width: 12rem; */
     font-size: var(--fz-text-450);
   }
+
   .items__label {
     gap: .1rem;
   }
+
   .items__label {
     gap: 0.2rem;
   }
+
   .items__label {
     justify-content: center;
     align-items: center;
   }
+
   .item__label {
     display: inline-flex;
     justify-content: flex-start;
@@ -397,6 +392,7 @@ a {
     padding: 0.3rem;
     cursor: pointer;
   }
+
   .label__style {
     box-sizing: border-box;
     display: inline-block;
@@ -405,11 +401,13 @@ a {
     border-radius: 50%;
     border: 0.2rem solid var(--color-yellow);
   }
+
   .item__label:hover > .label__style {
     background: var(--color-yellow-light);
     border: 0.2rem solid var(--color-yellow-light);
     transition: var(--time-fast);
   }
+
   #radio-1:checked ~ .items__control > .items__text {
     transform: translateX(-0%);
     transition: var(--time-fast) all linear;
@@ -431,7 +429,6 @@ a {
     transition: var(--time-fast) all linear;
   }
 
-
   .footer-container {
     gap: 0.7em;
     width: auto;
@@ -443,8 +440,8 @@ a {
   }
 }
 
-@media (max-width: 425px) {
- 
+
+@media (max-width: 425px) { 
   .wrapper {
     width: 100%;
   }
