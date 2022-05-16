@@ -344,7 +344,6 @@ a {
     display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0.4vw;
   }
 
   .label__style {
