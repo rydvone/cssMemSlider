@@ -282,10 +282,15 @@ a {
   border-radius: 50%;
   border: 0.3rem solid var(--color-yellow);
 }
+
 .item__label:hover > .label__style {
   background: var(--color-yellow-light);
   border: 0.3rem solid var(--color-yellow-light);
   transition: var(--time-fast);
+}
+
+.item__label:active > .label__style {
+  border: 0.3rem solid var(--color-error);
 }
 
 /*  nth-of-type - это псевдокласс - он не запрещен */
@@ -314,7 +319,7 @@ a {
   color: var(--color-yellow-white);
 }
 
-@media (max-width: 767.98px) { 
+@media (max-width: 850px) { 
   .h1 {
     font-style: bold;
     font-size: var(--fz-h1-768);
