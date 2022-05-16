@@ -29,23 +29,23 @@
   --fz-text-450: 2.5vw;
   --lh-text-450: 1.2em;
   --ls-text-450: 0.04em;
-  --fz-h1: 4rem;
-  --lh-h1: 1.3em;
+  --fz-h1: 4vw;
+  --lh-h1: 1.3vw;
   --ls-h1: 0.06em;
-  --fz-footer: 2rem;
-  --lh-footer: 1.3em;
+  --fz-footer: 1.5vw;
+  --lh-footer: 1.3vw;
   --ls-footer: 0.06em;
   --fz-h1-768: 2rem;
   --lh-h1-768: 1.3em;
   --ls-h1-768: 0.06em;
-  --fz-footer-768: 0.8rem;
-  --lh-footer-768: 1em;
+  --fz-footer-768: 0.8vw;
+  --lh-footer-768: 1vw;
   --ls-footer-768: 0.06em;
   --fz-h1-425: 1.5rem;
   --lh-h1-425: 1.3em;
   --ls-h1-425: 0.06em;
-  --fz-footer-768: 0.6rem;
-  --lh-footer-768: 1em;
+  --fz-footer-768: 0.6vw;
+  --lh-footer-768: 1vw;
   --ls-footer-768: 0.06em;
 }
 
