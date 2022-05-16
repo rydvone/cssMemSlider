@@ -17,7 +17,7 @@
   --color-yellow-white: #fffdbb;
   --color-yellow-light: #fffee0;
   --color-yellow-grey: #b8b7b0;
-  --slider-gap: 1.2rem;
+  --slider-gap: 2vh;
   --slider-gap-768: 1.2rem;
   --time-slow: 0.7s;
   --time-fast: 0.4s;
@@ -161,7 +161,7 @@ a {
 }
 .item__text {
   display: inline-block;
-  align-self: center;
+  align-self: top;
   transform: translateX(201%);
   font-size: var(--fz-text);
   line-height: var(--lh-text);
