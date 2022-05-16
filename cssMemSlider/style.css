@@ -73,10 +73,8 @@ a {
   background-color: var(--color-dark-3xl);
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
-
   overflow-x: hidden;
 }
-
 
 .header-container {
   display: flex;
@@ -208,7 +206,6 @@ a {
 }
 #radio-5:checked ~ .wrapper__content > .items__control > .items__text #text-5 {
   transform: translateX(-73rem);
-  /* visibility: visible; */
   transition: var(--time-fast) all linear;
 }
 
@@ -377,6 +374,7 @@ a {
     width: 100%;
     width: 21.875em;
     overflow-y: hidden;
+    visibility: visible;
   }
   .item__text {
     /* width: 12rem; */
@@ -421,11 +419,11 @@ a {
     transition: var(--time-fast) all linear;
   }
   #radio-3:checked ~ .items__control > .items__text {
-    transform: translateX(-40%);
+    transform: translateX(-60%);
     transition: var(--time-fast) all linear;
   }
   #radio-4:checked ~ .items__control > .items__text {
-    transform: translateX(0%);
+    transform: translateX(-21rem);
     transition: var(--time-fast) all linear;
   }
   #radio-5:checked ~ .items__control > .items__text {
